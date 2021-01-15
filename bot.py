@@ -4,22 +4,9 @@ import re
 
 import discord
 import spotipy
-from dotenv import load_dotenv
 from spotipy.oauth2 import SpotifyOAuth
 
-load_dotenv()
-
-#Discord Infomration
-TOKEN = os.getenv('DISCORD_TOKEN')
-CHANNEL = os.getenv('CHANNEL')
-
-#Spotipy Information
-SPOTIPY_CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
-SPOTIPY_CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
-SPOTIPY_REDIRECT_URI = os.getenv('SPOTIPY_REDIRECT_URI')
-
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="playlist-modify-public"))
-playlist = os.getenv('PLAYLIST')
 
 client = discord.Client()
 
