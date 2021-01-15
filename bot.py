@@ -40,6 +40,14 @@ async def on_message(message):
                 print("Song added!")
             except:
                 print("Addition of song failed")
+        elif re.match(r'^(!remove)', message.content):
+            try:
+                sp.user_playlist_remove_all_occurrences_of_tracks(sp.me(), playlist, [message.content])
+                print("Removal successful")
+            except:
+                print("Removal failed")
+        elif message.content == '!help':
+            print("!remove [track_URL] removes tracks. \n Otherwise, just paste urls in here and it will be added")
         else:
             print(f'Message id {message.id} is not a spotify link')
         return
