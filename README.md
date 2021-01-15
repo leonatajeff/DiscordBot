@@ -24,7 +24,10 @@ PLAYLIST={PLAYLIST_URI}
 
 ```
 
-Commands:
+## Commands:
+
 `!help` Displays help
+
 `!remove [track_URI]` Removes all instances of the track specified from the playlist.
+
 `!get_playlist` returns the playlist.
