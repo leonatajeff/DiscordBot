@@ -36,8 +36,8 @@ async def on_message(message):
                 print("Removal failed")
         elif message.content == '!help':
             await message.channel.send("!remove [track_URL] removes tracks. \n Otherwise, just paste urls in here and it will be added")
-        elif message.content == '!get_playlist':
-            await message.channel.send(playlist)
+        elif message.content == '!playlist':
+            await message.channel.send("https://open.spotify.com/playlist/0kvLobnBZgBn6nvS9kGNR9?si=2aClGxxiRp-EUGbERxWcrg")
         else:
             print(f'Message id {message.id} is not a spotify link')
         return
