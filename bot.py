@@ -1,10 +1,11 @@
 # bot.py
 import os
-import discord
 import re
+
+import discord
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
 from dotenv import load_dotenv
+from spotipy.oauth2 import SpotifyOAuth
 
 load_dotenv()
 
@@ -47,7 +48,7 @@ async def on_message(message):
             except:
                 print("Removal failed")
         elif message.content == '!help':
-            print("!remove [track_URL] removes tracks. \n Otherwise, just paste urls in here and it will be added")
+            await message.channel.send("!remove [track_URL] removes tracks. \n Otherwise, just paste urls in here and it will be added")
         else:
             print(f'Message id {message.id} is not a spotify link')
         return
